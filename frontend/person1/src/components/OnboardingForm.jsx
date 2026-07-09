@@ -47,7 +47,7 @@ export default function OnboardingForm({ onSubmit }) {
         year: form.year, branch: form.branch, goal: form.goal,
         skills: form.skills ? form.skills.split(",").map(s => s.trim()) : []
       };
-      const res = await fetch("http://localhost:3000/generate-roadmap", {
+      const res = await fetch("http://localhost:3001/generate-roadmap", {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify(profile)
       });
